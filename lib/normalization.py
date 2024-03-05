@@ -10,7 +10,7 @@ import re
 import nltk
 import string
 from nltk.stem import WordNetLemmatizer
-from html.parser import HTMLParser
+import html
 import unicodedata
 from tqdm.auto import tqdm
 
@@ -21,7 +21,7 @@ nltk.download('punkt')
 stopword_list = nltk.corpus.stopwords.words('english')
 
 wnl = WordNetLemmatizer()
-html_parser = HTMLParser()
+html_parser = html
 
 def tokenize_text(text):
     tokens = nltk.word_tokenize(text)
